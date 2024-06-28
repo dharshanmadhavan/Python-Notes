@@ -1,0 +1,39 @@
+Date and Time
+Python is very useful in case of Date and Time. We can easily retrieve current date and time using Python.
+Retrieve Time
+To retrieve current time a predefined function localtime() is used. localtime() receives a parameter time.time() . Here,
+
+ex:
+import time;  
+localtime = time.localtime(time.time())  
+print ("Current Time is :", localtime)  
+
+
+
+Formatted Time
+Python also support formatted time. Proceed as follows:
+1.	Pass the time structure in a predefined function asctime(). It is a function defined in time module.
+2.	It returns a formatted time which includes Day ,month, date, time and year.
+3.	Print the formatted time.
+
+ex:import time;  
+localtime = time.asctime(time.localtime(time.time()))  
+print ("Current Time is :", localtime)  
+
+Calendar
+Python provides calendar module to display Calendar.
+
+Ex:
+#print particular month
+import calendar  
+print("Current month is:")  
+cal = calendar.month(2024, 5)  
+print(cal ) 
+
+
+#print whole year calander 
+import calendar  
+calendar.prcal(2024)  
+
+
+

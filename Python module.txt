@@ -1,0 +1,128 @@
+Python Module
+Modules are used to categorize code in Python into smaller part. A module is simply a file, where classes, functions and variables are defined. Grouping similar code into a single file makes it easy to access.
+Have a look over example:
+If the content of a book is not indexed or categorized into individual chapters, then the book might have turned boring and hectic. Hence, dividing book into chapters made it easy to understand.
+In the same sense python modules are the files which have similar code. Thus module is simplify a python code where classes, variables and functions are defined.
+
+Advantage:
+Python provides the following advantages for using module:
+1) Reusability: Module can be used in some other python code. Hence it provides the facility of code reusability.
+2) Categorization: Similar type of attributes can be placed in one module.
+
+
+
+1) Using import statement:
+"import" statement can be used to import a module.
+Syntax:
+import <file_name1, file_name2,...file_name(n)="">  
+</file_name1,>  
+
+Ex:
+sum.py 
+
+def add(a,b):  
+    c=a+b  
+    print(c)  
+
+sub.py
+def subract(a,b):  
+    c=a-b  
+    print(c)  
+
+multiply.py
+
+def multiply(a,b):  
+    c=a*b  
+    print(c)  
+
+res.py
+
+import sum,sub,multiply
+sum.add(10,20)
+sub.subract(100,50)
+multiply.multiply(30,50)
+
+
+2.2) Using from.. import statement:
+from..import statement is used to import particular attribute from a module. In case you do not want whole of the module to be imported then you can use from ?import statement.
+Syntax:
+from  <module_name> import <attribute1,attribute2,attribute3,...attributen>     
+</attribute1,attribute2,attribute3,...attributen></module_name>  
+
+
+Ex:
+area.py
+
+def circle(r):  
+    print(3.14*r*r)
+    return  
+  
+def square(l):  
+    print(l*l) 
+    return  
+  
+def rectangle(l,b):  
+    print(l*b)  
+    return  
+  
+def triangle(b,h):  
+    print(0.5*b*h)  
+    return  
+
+
+res.py
+from area import square,triangle
+square(10)
+triangle(100,10)
+
+3) To import whole module:
+You can import whole of the module using "from? import *"
+Syntax:
+from <module_name> import *  
+</module_name>  
+
+Ex:
+res.py
+from area import *
+square(10)
+triangle(100,10)
+circle(9)
+rectangle(5,10)
+
+
+Built in Modules in Python:
+There are many built in modules in Python. Some of them are as follows:
+math, random , threading , collections , os , mailbox , string , time , tkinter etc..
+Each module has a number of built in functions which can be used to perform various functions.
+
+1.Math 
+
+Ex:
+import math
+a=5.6
+print(math.ceil(a))
+print(math.floor(a))
+b=5
+c=2
+   
+print(math.sqrt(b))
+print(math.pow(b,c))
+
+2) random:
+
+random()	It returns a random number between 0.0 and 1.0 where 1.0 is exclusive.
+randint(x,y)	It returns a random number between x and y where both the numbers are inclusive.
+
+Ex:
+import random
+print(random.random())  
+print(random.randint(2,8))  
+
+Package
+A Package is simply a collection of similar modules, sub-packages etc..
+Steps to create and import Package:
+1) Create a directory, say Info
+2) Place different modules inside the directory. We are placing 3 modules msg1.py, msg2.py and msg3.py respectively and place corresponding codes in respective modules. Let us place msg1() in msg1.py, msg2() in msg2.py and msg3() in msg3.py.
+3) Create a file __init__.py which specifies attributes in each module.
+4) Import the package and use the attributes using package.
+

@@ -1,0 +1,50 @@
+
+Ex:1 
+
+try:  
+    a=10/2 
+    print(a)  
+except ArithmeticError:  
+        print("This statement is raising an exception")  
+else:  
+    print("Welcome")  
+
+
+Except with no Exception:
+Except statement can also be used without specifying Exception.
+
+
+Ex:
+try:  
+    a=10/0 
+    print(a)  
+except :  
+        print("This statement is raising an zero division error")  
+else:  
+    print("Welcome")  
+
+Declaring Multiple Exception
+Multiple Exceptions can be declared using the same except statement:
+
+Ex:
+
+try:  
+    a=10/2 
+    print(a)  
+except ((ArithmeticError),(NameError),(IndentationError)):  
+        print("This statement is raising an exception")  
+else:  
+    print("Welcome")  
+
+Finally Block:
+In case if there is any code which the user want to be executed, whether exception occurs or not then that code can be placed inside the finally block. Finally block will always be executed irrespective of the exception.
+
+ex:
+try:  
+    a=10/0 
+    print(a)  
+except ArithmeticError:  
+        print("This statement is raising an exception")  
+finally:  
+    print("Welcome")  
+
